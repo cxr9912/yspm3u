@@ -29,7 +29,29 @@ jobs:
     - name: Generate M3U file
       run: |
         python generate_m3u.py
-        
+
+    - name: Commit and push
+        working-directory: epg  # 使用官方推荐方式指定路径
+        run: |
+          # 显式检查文件状态
+          git status
+          git diff
+
+          # 配置 Git 身份
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 添加所有变化（适应文件名大小写变化）
+          git add --all
+
+          # 检测是否有可提交内容
+          if [ -n "$(git status --porcelain)" ]; then
+            now_time=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')
+            git commit -m "自动更新时间：$now_time"
+            git push origin main
+          else
+            echo "无实际文件变更，跳过提交"
+          fi    
     - name: Upload M3U file as artifact
       uses: actions/upload-artifact@v4
       with:
