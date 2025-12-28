@@ -64,7 +64,7 @@ def generate_m3u(channels: List[Dict[str, str]], output_file: str = "live.m3u"):
     """生成 M3U 文件"""
     with open(output_file, 'w', encoding='utf-8') as f:
         # 写入 M3U 头部
-        f.write("#EXTM3U\n")
+        f.write("#EXTM3U url-tvg="https://github.com/zzq1234567890/epg/raw/refs/heads/main/swepg.xml.gz" catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}"\n")
         f.write("#EXT-X-VERSION:3\n")
         f.write("#EXT-X-INDEPENDENT-SEGMENTS\n")
         f.write("#EXT-X-TARGETDURATION:5\n")
