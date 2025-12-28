@@ -63,8 +63,6 @@ cgtn英文記錄片,http://127.0.0.1:8080/ysp?cnlid=2024182301&livepid=600084781
 兵團衛視,http://127.0.0.1:8080/ysp?cnlid=2025990501&livepid=600193252&defn=fhd
 國學頻道,http://127.0.0.1:8080/ysp?cnlid=2029360403&livepid=600213139&defn=fhd
 
-cctv央視檯球頻道,http://127.0.0.1:8080/ysp?cnlid=2026875003&livepid=600099652&defn=fhd
-cctv電視指南頻道,http://127.0.0.1:8080/ysp?cnlid=2026875103&livepid=600099656&defn=fhd
-cctv衛生健康頻道,http://127.0.0.1:8080/ysp?cnlid=2025637003&livepid=600099651&defn=fhd
+
 
 
