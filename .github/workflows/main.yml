@@ -6,7 +6,7 @@ on:
   workflow_dispatch:  # 允许手动触发
   schedule:
     # 每天 UTC 时间 0 点运行（北京时间 8 点）
-    - cron: '0 0 * * *'
+    - cron: '*/30 * * * *'
 
 # 需要显式授予写入权限
 permissions:
